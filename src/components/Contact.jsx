@@ -25,11 +25,11 @@ const Contact = () => {
 
     try {
       const templateParams = {
-        to_name: "Long Truong",
-        from_name: formData.name,
-        reply_to: formData.email,
+        title: formData.name,
+        name: formData.name,
         message: formData.message,
-        sender_email: formData.email
+        sender_email: formData.email,
+        time: new Date().toLocaleString()
       };
 
       await emailjs.send(
