@@ -25,13 +25,8 @@ const Contact = () => {
 
     try {
       const templateParams = {
-        subject: `New message from ${formData.name}`,
-        name: formData.name,
-        message: formData.message,
-        time: new Date().toLocaleString(),
+        message: `From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
         sender_email: formData.email,
-        from_name: formData.name,
-        to_name: "Long Truong",
         reply_to: formData.email
       };
 
