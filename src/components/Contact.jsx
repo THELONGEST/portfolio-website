@@ -4,7 +4,7 @@ import * as emailjs from '@emailjs/browser';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    email_from: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,41 +18,39 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    try {
-      const templateParams = {
-        message: `From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,
-        sender_email: formData.email,
-        reply_to: formData.email
-      };
+    const templateParams = {
+      name: formData.name,
+      email_from: formData.email_from,
+      message: formData.message,
+      time: new Date().toLocaleString(), // 🕒 Add current time
+    };
 
-      await emailjs.send(
-        "service_7hxzrvn",
-        "template_iwf7v1j",
-        templateParams,
-        "IobXut44Lh6rpc6vg"
-      );
-
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    emailjs.send('service_7hxzrvn', 'template_iwf7v1j', templateParams, 'IobXut44Lh6rpc6vg')
+      .then((result) => {
+        console.log('SUCCESS!', result.text);
+        setSubmitStatus('success');
+        setFormData({ name: '', email_from: '', message: '' });
+      })
+      .catch((error) => {
+        console.log('FAILED...', error.text);
+        setSubmitStatus('error');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
     <section id="contact" className="section contact">
       <div className="section-content">
-        <h2 className="section-title">Get in Touch</h2>
+        <h2 className="section-title">Send me a message</h2>
         <div className="contact-container">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" onSubmit={sendEmail}>
             <input
               type="text"
               name="name"
@@ -64,10 +62,10 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="email"
+              name="email_from"
               placeholder="Email"
               className="form-input"
-              value={formData.email}
+              value={formData.email_from}
               onChange={handleInputChange}
               required
             />
@@ -103,4 +101,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
