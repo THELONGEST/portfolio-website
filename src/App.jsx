@@ -3,6 +3,7 @@ import './App.css'
 import * as emailjs from '@emailjs/browser'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio'
+import Shorts from './components/Shorts'
 import Services from './components/Services'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -37,6 +38,7 @@ function App() {
               <div className="nav-menu">
                 <a href="#home">Home</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#shorts">Shorts</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -47,6 +49,7 @@ function App() {
           <main>
             <Hero />
             <Portfolio />
+            <Shorts />
             <Services />
             <About />
             <Contact />
