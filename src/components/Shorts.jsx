@@ -5,31 +5,34 @@ const PortfolioItem = lazy(() => import('./PortfolioItem'));
 const Shorts = () => {
   const shortsItems = [
     {
-      title: "Urban Life Short",
-      description: "Fast-paced urban lifestyle capture",
-      thumbnailUrl: "https://i.ytimg.com/vi_webp/example1/mqdefault.webp",
-      videoUrl: "https://www.youtube.com/shorts/RiOqgmmcSvc?feature=share",
-      categories: ["Urban", "Lifestyle", "Short"]
+      title: "Health Influencer Short",
+   
+      
+     thumbnailUrl: "https://img.youtube.com/vi/R9ZgfDvcn4M/0.jpg",  // Pattern 1
+     //https://img.youtube.com/vi/${videoId}/hqdefault.jpg
+    // OR
+      videoUrl: "https://www.youtube.com/shorts/R9ZgfDvcn4M?feature=share",
+      categories: [ "Lifestyle", "Short"]
     },
     {
-      title: "Nature Moments",
+      title: "Ali Abdaal Short",
       description: "Breathtaking nature in 60 seconds",
       thumbnailUrl: "https://i.ytimg.com/vi_webp/example2/mqdefault.webp",
-      videoUrl: "https://www.youtube.com/shorts/example2",
-      categories: ["Nature", "Quick", "Beautiful"]
+      videoUrl: "https://www.youtube.com/shorts/g9vYvf9zP7M",
+      categories: ["Natural", "Educational",    ]
     },
     {
-      title: "Product Showcase",
+      title: "Cryto UI",
       description: "Quick product highlight reel",
-      thumbnailUrl: "https://i.ytimg.com/vi_webp/example3/mqdefault.webp",
-      videoUrl: "https://www.youtube.com/shorts/example3",
+      
+      videoUrl: "https://www.youtube.com/shorts/Azis35a40Z0",
       categories: ["Product", "Commercial", "Short"]
     },
     {
-      title: "Creative Transition",
+      title: "Dan Koe Short",
       description: "Innovative transition techniques showcase",
       thumbnailUrl: "https://i.ytimg.com/vi_webp/example4/mqdefault.webp",
-      videoUrl: "https://www.youtube.com/shorts/example4",
+      videoUrl: "https://www.youtube.com/shorts/mkPfUR5xmgI",
       categories: ["Creative", "Transitions", "Effects"]
     }
   ];
@@ -50,8 +53,8 @@ const Shorts = () => {
               <PortfolioItem
                 key={index}
                 title={item.title}
-                description={item.description}
-                thumbnailUrl={item.thumbnailUrl}
+                
+                
                 videoUrl={item.videoUrl}
                 categories={item.categories}
                 isVertical={true}

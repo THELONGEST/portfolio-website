@@ -34,6 +34,7 @@ body {
   max-width: 100vw;
 }
 
+
 .app-container {
   width: 100vw;
   max-width: 100vw;
@@ -361,7 +362,12 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.description{
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  text-align: center;
+}
 .section::before {
   content: '';
   position: absolute;
@@ -505,6 +511,8 @@ body {
 .portfolio-item:hover .portfolio-item-overlay {
   opacity: 1;
 }
+
+
 
 .portfolio-item-content {
   color: white;
@@ -663,10 +671,14 @@ body {
 
 /* Vertical Video Modal Player */
 .video-modal-player.vertical {
+  position: relative;
   padding-top: 177.78%; /* 9:16 Aspect Ratio */
+  width: 100%;
   max-width: 350px;
   margin: 0 auto;
+  overflow: hidden;
 }
+
 
 .video-modal-content.vertical {
   max-width: 450px;
@@ -1295,6 +1307,16 @@ body {
   transform: translateZ(0);
 }
 
+.video-modal-backdrop, .video-modal-content {
+  will-change: transform; /* Hint to browser for optimization */
+  backface-visibility: hidden; /* Improve rendering performance */
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.video-modal-player iframe {
+  transition: none !important; /* Disable any transitions */
+}
+
 .fullscreen-active {
   background-color: transparent !important;
   backdrop-filter: none !important;
@@ -1316,7 +1338,7 @@ body {
 .video-modal-content {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 100px;
   background-color: rgba(26, 26, 74, 0.95);
   border-radius: 15px;
   padding: 2rem;
