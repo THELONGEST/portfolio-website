@@ -6,18 +6,6 @@ const PortfolioItem = ({ title, description, thumbnailUrl, videoUrl, embedCode, 
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-  // Extract YouTube ID from various formats
-  const getYouTubeId = (url) => {
-    if (!url) return null;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|shorts\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
-  };
-
-    const videoId = getYouTubeId(videoUrl);
-
-  const resolvedThumbnail = thumbnailUrl || (videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : '');
   const handleClick = () => {
     setIsModalOpen(true);
   };
@@ -25,7 +13,6 @@ const PortfolioItem = ({ title, description, thumbnailUrl, videoUrl, embedCode, 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  console.log("Thumbnail URL:", resolvedThumbnail);
 
   return (
     <>
@@ -42,7 +29,7 @@ const PortfolioItem = ({ title, description, thumbnailUrl, videoUrl, embedCode, 
         <div className="portfolio-item-image">
           {!isVertical && (
             <img 
-              src={resolvedThumbnail || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+              src={thumbnailUrl} 
               alt={title} 
               loading="lazy" 
               width="100%" 

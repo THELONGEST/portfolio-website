@@ -57,7 +57,7 @@ export const portfolioItems = [
     
     thumbnailUrl: "https://img.youtube.com/vi/B8NraTS72i0/maxresdefault.jpg", // Replace GAMING_VIDEO_ID with your actual video ID
 
-    embedCode: '<iframe width="1513" height="577" src="https://www.youtube.com/embed/dR9Aua5NaCg" title="Comp 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>', // Replace with your actual embed code
+    embedCode: '<iframe width="1513" height="577" src="https://www.youtube.com/embed/B8NraTS72i0" title="Valentino Foodshow: Review Egg Cooker from Dash" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
     categories: ["Review", "Entertainment"]
   },
   

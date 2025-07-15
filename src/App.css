@@ -512,8 +512,6 @@ body {
   opacity: 1;
 }
 
-
-
 .portfolio-item-content {
   color: white;
   text-align: center;
@@ -671,14 +669,10 @@ body {
 
 /* Vertical Video Modal Player */
 .video-modal-player.vertical {
-  position: relative;
   padding-top: 177.78%; /* 9:16 Aspect Ratio */
-  width: 100%;
   max-width: 350px;
   margin: 0 auto;
-  overflow: hidden;
 }
-
 
 .video-modal-content.vertical {
   max-width: 450px;
@@ -882,6 +876,7 @@ body {
   font-size: 1rem;
   transition: all 0.3s ease;
   width: 100%;
+  color: black;
 }
 
 .form-input:focus,
@@ -1338,7 +1333,7 @@ body {
 .video-modal-content {
   position: relative;
   width: 100%;
-  max-width: 100px;
+  max-width: 1200px;
   background-color: rgba(26, 26, 74, 0.95);
   border-radius: 15px;
   padding: 2rem;

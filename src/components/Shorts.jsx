@@ -22,7 +22,7 @@ const Shorts = () => {
       categories: ["Natural", "Educational",    ]
     },
     {
-      title: "Cryto UI",
+      title: "Crypto UI",
       description: "Quick product highlight reel",
       
       videoUrl: "https://www.youtube.com/shorts/Azis35a40Z0",
