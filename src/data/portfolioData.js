@@ -45,6 +45,14 @@ export const portfolioItems = [
     categories: ["Documentary", "Education"]
   },
   {
+    title: "Horror Video Edit",
+    
+    thumbnailUrl: "https://img.youtube.com/vi/FfO7J5Tvpo4/maxresdefault.jpg", // Replace GAMING_VIDEO_ID with your actual video ID
+   
+    embedCode: '<iframe width="942" height="530" src="https://www.youtube.com/embed/FfO7J5Tvpo4" title="Export 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    categories: ["Documentary", "Horror"]
+  },
+  {
     title: "Iman Gadzhi Edit",
     
     thumbnailUrl: "https://img.youtube.com/vi/dR9Aua5NaCg/maxresdefault.jpg", // Replace GAMING_VIDEO_ID with your actual video ID
