@@ -37,6 +37,14 @@ export const portfolioItems = [
     categories: ["Documentary", "Self-Improvement","Talking Head"]
   },
   {
+    title: "Vox Style Edit",
+    
+    thumbnailUrl: "https://img.youtube.com/vi/Hn6JDPJzxBA/maxresdefault.jpg", // Replace GAMING_VIDEO_ID with your actual video ID
+   
+    embedCode: '<iframe width="928" height="522" src="https://www.youtube.com/embed/Hn6JDPJzxBA" title="My Lovely Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+    categories: ["Documentary", "Education"]
+  },
+  {
     title: "Versed Document Edit",
     
     thumbnailUrl: "https://img.youtube.com/vi/r2fZq0YKMHc/maxresdefault.jpg", // Replace GAMING_VIDEO_ID with your actual video ID
